@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { setFilter } from '../actions/filter'
 
 const styles = {
   link: {
@@ -22,7 +23,7 @@ const FilterLink = ({ activeFilter, dispatch, children }) => {
     return (
       <span
         style={styles.link}
-        onClick={() => dispatch({ type: 'SET_FILTER', filter: children }) }
+        onClick={() => dispatch(setFilter(children)) }
       >
         {children}
       </span>

@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { incId } from '../actions/nextId'
+import { addTodo } from '../actions/todos'
 
 class TodoForm extends React.Component {
   state = { name: '' }
@@ -12,8 +14,8 @@ class TodoForm extends React.Component {
     const { name } = this.state
     //const name = this.state.name
     const todo = { name, id, complete: false }
-    dispatch({ type: 'ADD_TODO', todo })
-    dispatch({ type: 'INC_ID' })
+    dispatch(addTodo(todo))
+    dispatch(incId())
     this.setState({ name: '' })
   }
 

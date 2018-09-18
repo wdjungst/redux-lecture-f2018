@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { toggleTodo } from '../actions/todos'
 
 const styles = {
   pointer: {
@@ -13,7 +14,7 @@ const styles = {
 
 const Todo = ({ id, name, complete, dispatch }) => (
   <li
-    onClick={() => dispatch({ type: 'TOGGLE_TODO', id }) }
+    onClick={() => dispatch(toggleTodo(id)) }
     style={ complete ? {...styles.pointer, ...styles.complete} : styles.pointer }
   >
     {name}
@@ -21,6 +22,10 @@ const Todo = ({ id, name, complete, dispatch }) => (
 )
 
 export default connect()(Todo)
+
+
+
+
 
 
 
