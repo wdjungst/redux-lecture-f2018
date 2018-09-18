@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleTodo } from '../actions/todos'
+import { toggleTodo } from '../reducers/todos'
 
 const styles = {
   pointer: {

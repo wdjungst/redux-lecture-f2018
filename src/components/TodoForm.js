@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { incId } from '../actions/nextId'
-import { addTodo } from '../actions/todos'
+import { incId } from '../reducers/nextId'
+import { addTodo } from '../reducers/todos'
 
 class TodoForm extends React.Component {
   state = { name: '' }

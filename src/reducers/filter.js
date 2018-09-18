@@ -1,6 +1,10 @@
-import { SET_FILTER } from '../actions/filter'
+const SET_FILTER = 'SET_FILTER'
 
-const filter = (state = 'All', action) => {
+export const setFilter = (filter) => {
+  return { type: SET_FILTER, filter }
+}
+
+export default (state = 'All', action) => {
   switch(action.type) {
     case SET_FILTER:
       //{ type: 'SET_FILTER', filter: 'Complete' }
@@ -10,4 +14,3 @@ const filter = (state = 'All', action) => {
   }
 }
 
-export default filter

@@ -1,6 +1,16 @@
-import { TOGGLE_TODO, ADD_TODO } from '../actions/todos'
+const ADD_TODO = 'ADD_TODO'
+const TOGGLE_TODO = 'TOGGLE_TODO'
 
-const todos = ( state = [], action ) => {
+export const addTodo = (todo) => {
+  return { type: ADD_TODO, todo }
+}
+
+export const toggleTodo = (id) => {
+  return { type: TOGGLE_TODO, id }
+}
+
+
+export default ( state = [], action ) => {
   switch(action.type) {
     case ADD_TODO:
       return [action.todo, ...state]
@@ -15,6 +25,4 @@ const todos = ( state = [], action ) => {
       return state
   }
 }
-
-export default todos
 

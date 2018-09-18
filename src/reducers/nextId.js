@@ -1,6 +1,10 @@
-import { INC_ID } from '../actions/nextId'
+const INC_ID = 'INC_ID'
 
-const nextId = (state = 0, action) => {
+export const incId = () => {
+  return { type: INC_ID }
+}
+
+export default (state = 0, action) => {
   switch(action.type) {
     case INC_ID:
       return state + 1
@@ -9,4 +13,3 @@ const nextId = (state = 0, action) => {
   }
 }
 
-export default nextId

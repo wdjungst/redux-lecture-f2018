@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setFilter } from '../actions/filter'
+import { setFilter } from '../reducers/filter'
 
 const styles = {
   link: {
