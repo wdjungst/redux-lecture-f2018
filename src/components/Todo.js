@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleTodo } from '../reducers/todos'
+import { toggleTodo, deleteTodo } from '../reducers/todos'
 
 const styles = {
   pointer: {
@@ -18,6 +18,7 @@ const Todo = ({ id, name, complete, dispatch }) => (
     style={ complete ? {...styles.pointer, ...styles.complete} : styles.pointer }
   >
     {name}
+    <button onClick={ () => dispatch(deleteTodo(id)) }>X</button>
   </li>
 )
 
